@@ -3,23 +3,26 @@
 
 let gradeCalc = function(studentScore, maxScore){
    let gradePerc = (studentScore / maxScore ) * 100
-
+    let Grade = ''
  
   
-   if(gradePerc >= 90 && gradePerc <=100){
-    return `Your, mark is A with ${gradePerc}%`
-   } else if (gradePerc >= 80 && gradePerc <=89){
-    return `Your, mark is B with ${gradePerc}%`
+   if(gradePerc >= 90){
+       Grade = 'A'
+   
+   } else if (gradePerc >= 80 ){
+    Grade = 'B'
    }
-   else if(gradePerc >= 70 && gradePerc <=79){
-    return `Your, mark is C with ${gradePerc}%`
+   else if(gradePerc >= 70 ){
+    Grade = 'C'
    }
-   else if(gradePerc >= 60 && gradePerc <=69){
-    return `Your, mark is D with ${gradePerc}%`
+   else if(gradePerc >= 60 ){
+    Grade = 'D'
    }
-   else{return `you can do better dont give hope ${gradePerc}%`}
+   else{ Grade = 'F'}
+
+   return `Your, mark is ${Grade} with ${gradePerc}%`
 
 
 }
-let result = gradeCalc(14,20)
+let result = gradeCalc(4,20)
 console.log(result)
