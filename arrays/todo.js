@@ -24,19 +24,19 @@
 
 const todos = [{
     title: 'code',
-    completed: 'true'
+    completed: true
     },
     {
     title: 'eat',
-    completed: 'true'
+    completed: true
     },
     {
     title: 'sleep',
-    completed: 'false'
+    completed: false
     },
     {
     title: 'gym',
-    completed: 'false'
+    completed: false
 }]
 
 
@@ -53,5 +53,31 @@ const findAndRemove = function(todos, todotitle){
     })
 }
 
-findAndRemove(todos, 'gymddd')
+// filter completed todos 
+// filter takes an arry an return a subset of the array with the result with wanted 
 
+const checkIfcomplete = function(todos){
+return todos.filter(function(todo, index){
+        const isCompleted = todo.completed
+        return !isCompleted
+})
+}
+
+// sort todo 
+
+const sortTodos = function(todos){
+todos.sort(function(a, b){
+    if(!a.completed && b.completed){
+        return -1
+    } else if (!b.completed && a.completed){
+        return 1
+    } else {
+        return 0
+    }
+})
+
+}
+// console.log(checkIfcomplete(todos))
+// findAndRemove(todos, 'gymddd')
+sortTodos(todos)
+console.log(todos)

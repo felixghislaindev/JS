@@ -36,6 +36,7 @@ const findNote = function (notes, noteTitle){
     })
 
 }
+// filtering 
 
 const note =  findNote(notes, 'running')
 console.log(note)
