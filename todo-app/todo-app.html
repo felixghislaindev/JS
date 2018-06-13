@@ -11,7 +11,28 @@
     <p>Never Forget Task You Have To Do</p>
     <p>Things To Do</p>
     <input type="text" placeholder="Add a new todo" id='add-todo'>
-    <button id="create-note">Create Note</button>
+    <form id="Todo-form" action="">
+        <input type="text" placeholder="Enter a todo" name="TODO">
+        <button id="">Add A Todo</button>
+    </form>
+    <label >
+        <input type="checkbox" id="checked"> Hide completed
+        <select name="" id="choice">
+            <option value="lastAdded">Sort by last added</option>
+            <option value="bycreated">Sort by created at</option>
+            <option value="byalphabetical">Sort by alphabetical</option>
+            <option value="notCompleted">Sort by not completed</option>
+
+        </select>
+    </label>
+    
+    <div id="todo"></div>
+    
 </body>
+<script src="http://wzrd.in/standalone/uuid%2Fv4@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+<script src="todo-functtions.js"></script>
 <script src="todo-app.js"></script>
+
+
 </html>

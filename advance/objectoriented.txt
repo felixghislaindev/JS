@@ -1,0 +1,6 @@
+making a new version of something is called an instance 
+cunstrutor function new keyword 
+the new oprator generate a 
+
+
+
